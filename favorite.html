@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=0">
+    <title>收藏夹 - 小七购物平台</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        #content {
+            /* height: 500px; */
+            background-color: white;
+            padding: 10px 10px 10px 10px;
+        }
+        #content>h1 {
+            text-align: center;
+        }
+        .goodslist{
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="app">
+        <div id="header">
+            <div>
+                <div id="Logo">
+                    <img src="img/icons/logo.svg" alt="Logo" srcset="">
+                </div>
+                <h1 id="header-text">小七购物平台</h1>
+                <div id="searchbar">
+                </div>
+                <ul class="header-nav">
+                    <li>
+                        <a href="index.html">首页</a>
+                    </li>
+                    <li>
+                        <a href="shoppingcart.html">购物车</a>
+                    </li>
+                    <li>
+                        <a href="favorite.html"><strong>收藏夹</strong></a>
+                    </li>
+                    <li>
+                        <a href="aboutme.html">我的</a>
+                    </li>
+                </ul>
+                <div id="searchbar">
+                    <div>
+                        <input type="text" name="" id="searchbar-text" @keydown.enter="btn404">
+                        <img src="img/icons/search.svg" alt="" class="searchbar-btn" @click="btn404">
+                    </div>
+                </div>
+                <span id="header-username">
+                    <a href="">你好,{{username}}</a>
+                </span>
+            </div>
+        </div>
+        <div class="body-bg">
+            <div class="body-box">
+                <div id="content" class="box">
+                        <h1>你心爱的宝贝都在里面哦!</h1>
+                    <div class="goodslist">
+                        <ul>
+                            <li v-for="item in favorites">
+                                <goodsframe :goodsdata="item"></goodsframe>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="footer">
+            <div class="clearfloat"></div>
+            <div class="footer-link-box">
+                <ul>
+                    <li><strong>技术支持</strong></li>
+                    <li><a href="">支持计划</a></li>
+                    <li><a href="">帮助文档</a></li>
+                    <li><a href="">新手学堂</a></li>
+                </ul>
+                <ul>
+                    <li><strong>售后服务</strong></li>
+                    <li><a href="">商品退换</a></li>
+                    <li><a href="">商品维修</a></li>
+                    <li><a href="">上门服务</a></li>
+                </ul>
+                <ul>
+                    <li><strong>关于我们</strong></li>
+                    <li><a href="">联系我们</a></li>
+                    <li><a href="">政策条款</a></li>
+                    <li><a href="">企业服务</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <template id="goodsframe">
+        <div class="goodsframe">
+            <div class="goodsframe-img">
+                <a href="">
+                    <img :src="goodsdata.img" alt="" srcset="">
+                </a>
+            </div>
+            <a href="">{{goodsdata.name}}</a>
+            <div class="goodsframe-text">
+                <span class="goodsframe-price-unit">￥</span>
+                <span class="goodsframe-price-num">{{goodsdata.price}}</span>
+                <span class="goodsframe-sells">销量:{{goodsdata.sells}}</span>
+            </div>
+        </div>
+    </template>
+        <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+        <script src="js/main.js"></script>
+</body>
+
+</html>

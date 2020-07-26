@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=0">
+    <title>小七购物平台</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div id="app">
+        <div id="header">
+            <div>
+                <div id="Logo">
+                    <img src="img/icons/logo.svg" alt="Logo" srcset="">
+                </div>
+                <h1 id="header-text">小七购物平台</h1>
+                <div id="searchbar">
+                </div>
+                <ul class="header-nav">
+                    <li>
+                        <a href="index.html">
+                            <strong>首页</strong>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="shoppingcart.html">购物车</a>
+                    </li>
+                    <li>
+                        <a href="favorite.html">收藏夹</a>
+                    </li>
+                    <li>
+                        <a href="aboutme.html">我的</a>
+                    </li>
+                </ul>
+                <div id="searchbar">
+                    <div>
+                        <input type="text" name="" id="searchbar-text" @keydown.enter="btn404">
+                        <img src="img/icons/search.svg" alt="" class="searchbar-btn" @click="btn404">
+                    </div>
+                </div>
+                <span id="header-username">
+                    <a href="">你好,{{username}}</a>
+                </span>
+            </div>
+        </div>
+        <div class="body-bg">
+            <div class="body-box">
+                <div id="content" class="box">
+                    <div id="sidebar">
+                        <ul id="sidelist">
+                            <li>
+                                <a href="">家用电器</a>
+                                <ul>
+                                    <li>电视</li>
+                                    <li>洗衣机</li>
+                                    <li>冰箱</li>
+                                    <li>空调</li>
+                                    <li>电饭煲</li>
+                                    <li>电风扇</li>
+                                    <li>电磁炉</li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="">智能硬件</a>
+                                <ul>
+                                    <li>智能音箱</li>
+                                    <li>智能门铃</li>
+                                    <li>智能摄像头</li>
+                                    <li>智能遥控</li>
+                                    <li>智能插座</li>
+                                    <li>智能窗帘</li>
+                                    <li>智能台灯</li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="">手机</a>
+                                <ul>
+                                    <li>华为</li>
+                                    <li>三星</li>
+                                    <li>小米</li>
+                                    <li>OPPO</li>
+                                    <li>VIVO</li>
+                                    <li>IPhone</li>
+                                    <li>一加</li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="">服装</a>
+                                <ul>
+                                    <li>女上衣/男上衣</li>
+                                    <li>短裤/长裤/七分裤</li>
+                                    <li>袜子/内裤</li>
+                                    <li>包包</li>
+                                    <li>内饰</li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="">生活用品</a>
+                                <ul>
+                                    <li>水杯/漱口杯</li>
+                                    <li>牙膏/牙刷/电动牙刷</li>
+                                    <li>洗衣液/洗洁精/洗衣粉</li>
+                                    <li>沐浴露/洗发露/洗面奶</li>
+                                    <li>毛巾/手帕/纸巾</li>
+                                    <li>创可贴</li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="">化妆品</a>
+                                <ul>
+                                    <li>香水</li>
+                                    <li>眼线</li>
+                                    <li>护肤品</li>
+                                    <li>粉底液</li>
+                                    <li>口红</li>
+                                    <li>美瞳</li>
+                                    <li>卸妆</li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="">运动</a>
+                                <ul>
+                                    <li>运动上衣</li>
+                                    <li>运动裤</li>
+                                    <li>运动鞋</li>
+                                    <li>运动保护</li>
+                                    <li>运动背包</li>
+                                    <li>运动装备</li>
+                                    <li>运动食品</li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="">生鲜</a>
+                                <ul>
+                                    <li>绿色蔬菜</li>
+                                    <li>新鲜肉类</li>
+                                    <li>蛋类</li>
+                                    <li>菌类</li>
+                                    <li>调味品</li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="">生活服务</a>
+                                <ul>
+                                    <li>家电维修</li>
+                                    <li>上门安装</li>
+                                    <li>跑腿</li>
+                                    <li>代办证件</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                    <div id="realcontent">
+                        <div id="imageframe">
+                            <img src="img/bannerimg.jpg" alt="" srcset="">
+                        </div>
+                        <!-- <div id="border-box"></div> -->
+                    </div>
+                    <div class="clearfloat"></div>
+                </div>
+                <!-- 商品推荐 -->
+                <div class="shoppinglist box">
+                    <div class="shoppinglist-header">
+                        <h1>商品推荐</h1>
+                    </div>
+                    <div class="goodslist clearfloat">
+                        <ul>
+                            <li v-for="item in goodslist">
+                                <goodsframe :goodsdata="item"></goodsframe>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="two-span leftfloat">
+                    <!-- 你喜欢的商品降价啦! -->
+                    <div class="shoppinglist box">
+                        <div class="shoppinglist-header">
+                            <h1>你喜欢的商品降价啦!</h1>
+                        </div>
+                        <div class="goodslist clearfloat">
+                            <ul>
+                                <li v-for="item in goodslist2">
+                                    <goodsframe :goodsdata="item"></goodsframe>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="two-span rightfloat">
+                    <!-- 时尚有我 -->
+                    <div class="shoppinglist box">
+                        <div class="shoppinglist-header">
+                            <h1>时尚有我</h1>
+                        </div>
+                        <div class="goodslist clearfloat">
+                            <div class="two-columns-frames">
+                                <ul>
+                                    <li v-for="item in goodslist3">
+                                        <goodsframe :goodsdata="item"></goodsframe>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="clearfloat"></div>
+                <div class="shoppinglist box">
+                    <div class="shoppinglist-header">
+                        <h1>热卖单品</h1>
+                    </div>
+                    <div class="goodslist clearfloat">
+                        <ul>
+                            <li v-for="item in goodslist4">
+                                <goodsframe :goodsdata="item"></goodsframe>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="shoppinglist box">
+                    <div class="shoppinglist-header">
+                        <h1>特价优惠！</h1>
+                    </div>
+                    <div class="goodslist clearfloat">
+                        <ul>
+                            <li v-for="item in goodslist5">
+                                <goodsframe :goodsdata="item"></goodsframe>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="footer">
+            <div class="clearfloat"></div>
+            <div class="footer-link-box">
+                <ul>
+                    <li><strong>技术支持</strong></li>
+                    <li><a href="">支持计划</a></li>
+                    <li><a href="">帮助文档</a></li>
+                    <li><a href="">新手学堂</a></li>
+                </ul>
+                <ul>
+                    <li><strong>售后服务</strong></li>
+                    <li><a href="">商品退换</a></li>
+                    <li><a href="">商品维修</a></li>
+                    <li><a href="">上门服务</a></li>
+                </ul>
+                <ul>
+                    <li><strong>关于我们</strong></li>
+                    <li><a href="">联系我们</a></li>
+                    <li><a href="">政策条款</a></li>
+                    <li><a href="">企业服务</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+
+    <template id="goodsframe">
+        <div class="goodsframe">
+            <div class="goodsframe-img">
+                <a href="">
+                    <img :src="goodsdata.img" :alt="goodsdata.name" srcset="">
+                </a>
+            </div>
+            <a href="">{{goodsdata.name}}</a>
+            <div class="goodsframe-text">
+                <span class="goodsframe-price-unit">￥</span>
+                <span class="goodsframe-price-num">{{goodsdata.price}}</span>
+                <span class="goodsframe-sells">销量:{{goodsdata.sells}}</span>
+            </div>
+        </div>
+    </template>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>

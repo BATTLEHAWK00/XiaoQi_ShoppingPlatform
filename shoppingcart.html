@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=0">
+    <title>购物车 - 小七购物平台</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        #content{
+            background-color: white;
+            padding: 10px 10px 10px 10px;
+        }
+        #content>div{
+            width: fit-content;
+            margin: 20px auto;
+        }
+        #content>h1{
+            margin-left: 20px;
+        }
+        #content>table{
+            width: 80%;
+            margin: 0 auto;
+            border-width: 1px;
+            border-style: none;
+            border-color: #dfdfdf;
+            border-collapse: collapse;
+        }
+        /* #content>table td tr th{
+            border-color: #dfdfdf;
+        } */
+        .btn{
+            /* display: inline-block; */
+            width: 200px;
+            height: 50px;
+            text-align: center;
+            border-radius: 3px;
+            background-color: cyan;
+            border-style: none;
+            color: white;
+            box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.1);
+            transition: all .5s;
+        }
+        #moveBtn{
+            background-color: #00aeff;
+        }
+        #moveBtn:hover{
+            background-color: #00d5ff;
+        }
+        #purchaseBtn{
+            margin-left: 100px;
+            background-color: yellowgreen;
+        }
+        #purchaseBtn:hover{
+            background-color: #b2ea39;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="app">
+        <div id="header">
+            <div>
+                <div id="Logo">
+                    <img src="img/icons/logo.svg" alt="Logo" srcset="">
+                </div>
+                <h1 id="header-text">小七购物平台</h1>
+                <div id="searchbar">
+                </div>
+                <ul class="header-nav">
+                    <li>
+                        <a href="index.html">首页</a>
+                    </li>
+                    <li>
+                        <a href="shoppingcart.html"><strong>购物车</strong></a>
+                    </li>
+                    <li>
+                        <a href="favorite.html">收藏夹</a>
+                    </li>
+                    <li>
+                        <a href="aboutme.html">我的</a>
+                    </li>
+                </ul>
+                <div id="searchbar">
+                    <div>
+                        <input type="text" name="" id="searchbar-text" @keydown.enter="btn404">
+                        <img src="img/icons/search.svg" alt="" class="searchbar-btn" @click="btn404">
+                    </div>
+                </div>
+                <span id="header-username">
+                    <a href="">你好,{{username}}</a>
+                </span>
+            </div>
+        </div>
+        <div class="body-bg">
+            <div class="body-box">
+                <div id="content" class="box">
+                    <h1>您的购物车中有以下商品:</h1>
+                    <table border="1" cellspacing="0" cellpadding="5">
+                        <tr>
+                            <th>图片</th>
+                            <th>商品名称</th>
+                            <th>数量</th>
+                            <th>价格</th>
+                        </tr>
+                        <tr v-for="item in shoppingcart">
+                            <td><img :src="item.img" alt="" srcset=""></td>
+                            <td>{{item.name}}</td>
+                            <td>{{item.num}}</td>
+                            <td>{{item.price}}</td>
+                        </tr>
+                    </table>
+                    <div>
+                        <input type="button" value="移入收藏夹" id="moveBtn" class="btn" @click="btn404">
+                        <input type="button" value="立即购买" id="purchaseBtn" class="btn" @click="btn404">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="footer">
+            <div class="clearfloat"></div>
+            <div class="footer-link-box">
+                <ul>
+                    <li><strong>技术支持</strong></li>
+                    <li><a href="">支持计划</a></li>
+                    <li><a href="">帮助文档</a></li>
+                    <li><a href="">新手学堂</a></li>
+                </ul>
+                <ul>
+                    <li><strong>售后服务</strong></li>
+                    <li><a href="">商品退换</a></li>
+                    <li><a href="">商品维修</a></li>
+                    <li><a href="">上门服务</a></li>
+                </ul>
+                <ul>
+                    <li><strong>关于我们</strong></li>
+                    <li><a href="">联系我们</a></li>
+                    <li><a href="">政策条款</a></li>
+                    <li><a href="">企业服务</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>

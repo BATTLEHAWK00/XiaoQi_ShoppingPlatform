@@ -1,0 +1,348 @@
+.box{
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+    transition: all .25s;
+}
+.box:hover{
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+    transform: scale(1.02,1.02);
+}
+.body-bg{
+    /* border-radius: 20px; */
+    padding-top: 10px;
+    padding-bottom: 10px;
+    z-index: -1;
+    background-image: url('../img/bg6.jpg');
+}
+.body-box{
+    clear: both;
+    width: 80%;
+    height: auto;
+    margin: 0 auto;
+}
+
+/* 页头样式 */
+#header {
+    height: 100px;
+    width: 100%;
+    margin: 0 auto;
+    line-height: 100px;
+    background-color: white;
+}
+#Logo{
+    float: left;
+    height: 100px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+#Logo>img{
+    vertical-align: middle;
+    height: 50px;
+}
+#header-text {
+    display: inline;
+    color: #4c4c4c;
+    font-size: 35px;
+}
+.header-nav{
+    display: inline;
+    /* float: left; */
+    max-width: 80%;
+    margin: 0 30px;
+    margin-right: 20px;
+    padding: 0;
+}
+.header-nav>li {
+    list-style: none;
+    display: inline;
+    font-size: 18px;
+    margin-left: 10px;
+    padding: 5px;
+    transition: all .5s;
+}
+.header-nav>li:hover{
+    background-color: #00b9b9;
+}
+#header-username>a{
+    float: right;
+    margin-right: 20px;
+    font-size: 14px;
+    color: blueviolet;
+    transition: all .5s;
+}
+#header-username>a:hover{
+    color: yellowgreen;
+}
+.header-nav>li>a{
+    color: #000;
+    text-decoration: none;
+    transition: all .25s;
+}
+.header-nav>li>a:hover{
+    color: white;
+}
+
+#border-box {
+    min-height: 50px;
+    border-width: 1px;
+    border-style: solid;
+}
+#searchbar{
+    display: inline;
+    /* float: right; */
+    padding: 0;
+    margin-left: 20px;
+}
+#searchbar>div{
+    display: inline;
+    padding: 0;
+}
+#searchbar-text{
+    min-width: 100px;
+    height: 26px;
+    transition: all .5s;
+}
+#searchbar-text:focus{
+    min-width: 300px;
+}
+.searchbar-btn{
+    vertical-align: middle;
+    height: 30px;
+    width: 50px;
+    transition: all .25s;
+}
+.searchbar-btn:hover{
+    cursor: pointer;
+    transform: scale(1.3,1.3);
+}
+.searchbar-btn:active{
+    transform: scale(0.8,0.8);
+}
+
+/* 内容样式 */
+#content {
+    /* height: 500px; */
+    clear: both;
+    margin: 5px auto;
+    border-radius: 5px;
+}
+#realcontent {
+    float: right;
+    width: 80%;
+    height: 100%;
+    background-color: white;
+}
+
+#imageframe{
+    padding: 0;
+    height: 500px;
+}
+#imageframe>img{
+    width: 100%;
+    height: 100%;
+    /* height: 500px; */
+}
+/* .shoppinglist{
+    padding-left: 15px;
+} */
+.content-header{
+    height: 50px;
+}
+
+.shoppinglist-header{
+    width: 100%;
+    height: 50px;
+    text-align: center;
+    line-height: 50px;
+    margin-top: 20px;
+    padding-top: 10px;
+    background-color: white;
+}
+.clearfloat{
+    clear: both;
+}
+.goodslist{
+    overflow: hidden;
+    width: 100%;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    background-color: white;
+}
+.goodsframe{
+    float: left;
+    width: 200px;
+    height: 250px;
+    margin: 10px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+    transition: all .5s;
+}
+.goodsframe:hover{
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.4);
+    transform: scale(1.1,1.1);
+    z-index: 100;
+}
+.goodsframe-img{
+    width: 200px;
+    height: 200px;
+    margin: 0 auto;
+}
+.goodsframe-img>a>img{
+    width: 100%;
+    height: 100%;
+}
+.goodsframe>a{
+    display: block;
+    width: 80%;
+    font-size: 14px;
+    color: black;
+    text-decoration: none;
+    padding: 5px 5px 0 5px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.goodsframe-text{
+    height: 20px;
+    padding: 5px 5px 5px 5px;
+}
+.goodsframe-price-unit{
+    float: left;
+    font-size: 14px;
+    color: orange;
+}
+.goodsframe-price-num{
+    float: left;
+    font-size: 18px;
+    color: orange;
+}
+.goodsframe-sells{
+    font-size: 14px;
+    float: right;
+    color: #9ca0aa;
+}
+.two-columns-frames{
+    overflow: hidden;
+    width: 480px;
+    margin: 0 auto 0 auto;
+}
+
+
+
+
+/* 侧边栏样式 */
+#sidebar {
+    float: left;
+    width: 20%;
+    height: 500px;
+    min-height: 100px;
+    background-color: #d4ffde;
+}
+
+#sidebar>div {
+    padding: 5px;
+}
+#sidelist{
+    padding: 0;
+}
+#sidelist>li{
+    display: block;
+    width: 100%;
+    height: 50px;
+    text-align: center;
+    line-height: 50px;
+    transition: all .5s;
+}
+#sidelist>li>a{
+    /* color: blueviolet; */
+    text-decoration: none;
+}
+#sidelist>li:hover{
+    background-color: #a1cad5;
+}
+#sidelist>li ul{
+    position: relative;
+    display: block;
+    left: 100%;
+    top: -50px;
+    opacity: 0%;
+    visibility: hidden;
+    transition: all .5s;
+    z-index: 1;
+}
+#sidelist>li ul::before{
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #e5ffff;
+    filter: blur(3px);
+    /* opacity: 50%; */
+    z-index: -1;
+}
+#sidelist>li:hover ul{
+    visibility: visible;
+    background-color: #e5ffff;
+    padding-left: 0;
+    opacity: 95%;
+}
+#sidelist>li:hover ul::after{
+    filter: blur(2px);
+}
+.two-span{
+    display: inline-block;
+    width: 49%;
+}
+.leftfloat{
+    float: left;
+}
+.rightfloat{
+    float: right;
+}
+
+/* 页脚样式 */
+#footer{
+    width: 100%;
+    /* margin-top: 20px; */
+    text-align: center;
+    font-size: 12px;
+}
+.footer-link-box{
+    width: 100%;
+    background-color: #96d5d5;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    column-count: 3;
+    column-width: 50px;
+    column-rule: solid;
+    column-rule-width: 1px;
+    column-rule-color: grey;
+    column-gap: 20px;
+}
+.footer-link-box>ul{
+    margin: 0;
+    height: 100px;
+    overflow: auto;
+}
+.footer-link-box strong{
+    font-size: 16px;
+}
+.footer-link-box a{
+    font-size: 14px;
+    color: black;
+}
+/* 更改HTML默认样式 */
+body {
+    min-width: 1200px;
+    height: fit-content; 
+    font-family: system, -apple-system, BlinkMacSystemFont, 'PingFang SC', Arial, 'Microsoft YaHei', Lato, sans-serif;
+    background-color: #f0f0f0;
+    z-index: -1;
+}
+body>*{
+    z-index: 0;
+}
+
+ul{
+    list-style: none;
+}
