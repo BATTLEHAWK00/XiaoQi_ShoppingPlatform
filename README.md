@@ -1,1 +1,5 @@
-# XiaoQi_ShoppingPlatform
+此仓库为NCDA参赛网页设计作品
+
+小七购物平台（前端）
+
+使用Vue.js框架编写
